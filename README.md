@@ -1,41 +1,113 @@
-# Privaro + CrewAI Example
+# Privaro + CrewAI
 
-A runnable example showing how to use **Privaro** as a privacy layer for a simple CrewAI workflow before sending data to OpenAI.
+![python](https://img.shields.io/badge/python-3.10+-blue)
+![crewai](https://img.shields.io/badge/crewai-compatible-orange)
+![license](https://img.shields.io/badge/license-MIT-green)
 
-## What this demo shows
+**Run AI agents with autonomy — without losing control of your data.**
 
-1. Start with raw input that contains PII
-2. Protect the input with Privaro
-3. Run a CrewAI agent on sanitized data
-4. Optionally reveal the final output through Privaro
+---
 
-## Files
+## 🚀 What this is
 
-- `app.py`
-- `.env.example`
-- `requirements.txt`
+This example shows how to integrate **Privaro** into a CrewAI workflow.
 
-## Setup
+👉 Every agent step is protected before reaching the LLM.
+
+---
+
+## 🧩 Architecture
+
+```
+Agent Input
+   ↓
+Privaro (protect)
+   ↓
+CrewAI Agent
+   ↓
+LLM
+   ↓
+Privaro (reveal + audit)
+```
+
+---
+
+## 🔥 Why this matters
+
+AI agents:
+
+- chain actions
+- access multiple systems
+- expand risk surface
+
+👉 Privaro ensures:
+
+- controlled data flow
+- safe execution
+- auditability
+
+---
+
+## ❌ Without Privaro
+
+- Agents leak sensitive data
+- No visibility
+- No compliance guarantees
+
+## ✅ With Privaro
+
+- Tokenized interactions
+- Scoped data per run
+- Verifiable audit trail
+
+---
+
+## ⚡ Quickstart
 
 ```bash
+git clone https://github.com/YOUR_REPO/privaro-crewai-example
+cd privaro-crewai-example
+
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 ```
 
-## Run
+Run:
 
 ```bash
 python app.py
 ```
 
-## Architecture
+---
 
-```text
-User Input -> Privaro Protect -> CrewAI Agent -> OpenAI -> Privaro Reveal
-```
+## 🤖 Use with Agents
 
-## Notes
+- Multi-agent systems
+- Task delegation
+- Tool execution
 
-This is intentionally minimal. You can expand it to multiple agents, tasks, and tools once the basic flow is validated.
+---
+
+## 🧠 Who is this for
+
+- Teams building agentic AI systems
+- ISVs
+- Enterprise architects
+
+---
+
+## 🔗 Related
+
+- Proxy → https://github.com/Maperez1972/privaro-proxy
+- LangChain example
+- n8n example
+
+---
+
+## 🧭 Final Thought
+
+Agents introduce autonomy.
+
+Privaro introduces **boundaries**.
