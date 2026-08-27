@@ -65,7 +65,7 @@ AI agents:
 ## ⚡ Quickstart
 
 ```bash
-git clone https://github.com/YOUR_REPO/privaro-crewai-example
+git clone https://github.com/Maperez1972/privaro-crewai-example
 cd privaro-crewai-example
 
 python -m venv .venv
